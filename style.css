@@ -24,6 +24,7 @@ nav ul {
   display: flex;
   justify-content: center;
   background: #0066cc;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
 nav ul li {
@@ -65,6 +66,7 @@ footer {
   padding: 10px;
   margin-top: 20px;
 }
+
 .temple-card {
   background: #fff;
   border-radius: 10px;
@@ -86,6 +88,7 @@ footer {
 .temple-info {
   flex: 1;
 }
+
 /* Transport Page */
 .transport-card {
   background: #fff;
@@ -107,4 +110,55 @@ footer {
 
 .transport-info {
   flex: 1;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .temple-card,
+  .transport-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .temple-card img,
+  .transport-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul li a {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  section {
+    padding: 15px;
+  }
 }
