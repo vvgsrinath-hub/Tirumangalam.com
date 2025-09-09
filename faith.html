@@ -4,7 +4,165 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faith Centres - Tirumangalam</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #004080;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background: #0066cc;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      background: #004080;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    /* Faith Cards */
+    .faith-section {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    .mosque-card,
+    .church-card {
+      background: #ffffff;
+      border-left: 6px solid;
+      margin: 15px 0;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .mosque-card {
+      border-color: #0066cc; /* Blue for mosques */
+    }
+
+    .church-card {
+      border-color: #800000; /* Dark red for churches */
+    }
+
+    .mosque-card h3,
+    .church-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .mosque-card h3 {
+      color: #004080;
+    }
+
+    .church-card h3 {
+      color: #b30000;
+    }
+
+    .mosque-card p,
+    .church-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .mosque-card:hover,
+    .church-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul li {
+        margin: 5px 0;
+      }
+
+      .mosque-card,
+      .church-card {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav ul li a {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+
+      footer {
+        font-size: 0.8rem;
+      }
+
+      section {
+        padding: 15px;
+      }
+
+      .mosque-card h3,
+      .church-card h3 {
+        font-size: 1rem;
+      }
+
+      .mosque-card p,
+      .church-card p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,10 +170,9 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="temples.html">Temples</a></li>
-        <li><a href="faith.html" class="active">Faith Centres</a></li>
         <li><a href="education.html">Education</a></li>
+        <li><a href="faith.html" class="active">Faith Centres</a></li>
         <li><a href="shops.html">Shops</a></li>
         <li><a href="transport.html">Transport</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -23,115 +180,86 @@
     </nav>
   </header>
 
-  <!-- Mosques Section -->
   <section class="faith-section">
-    <h2>Mosques in Tirumangalam</h2>
-
-    <div class="faith-card">
+    <h2>Masjids</h2>
+    <div class="mosque-card">
       <h3>Kklm Jummah Masjid</h3>
-      <p>Address: RXCP+M95, NH 44, Tirumangalam, Tamil Nadu 625706</p>
-      <p>Details: Main mosque in Tirumangalam, known for its congregational Friday prayers.</p>
+      <p>RXCP+M95, NH 44, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="mosque-card">
       <h3>Tirumangalam Nawab Masjid</h3>
-      <p>Address: RXFJ+9G8, Tirumangalam, Tamil Nadu 625706</p>
-      <p>Details: Popular local mosque with daily prayers and community activities.</p>
+      <p>RXFJ+9G8, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="mosque-card">
       <h3>Masjid Thaqwa JAQH Markaz</h3>
-      <p>Address: RXCP+7W8, Tirumangalam, Tamil Nadu 625706</p>
-      <p>Details: Known for Islamic education programs and youth activities.</p>
+      <p>RXCP+7W8, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="mosque-card">
       <h3>Tirumangalam Thoppur Masjid</h3>
-      <p>Address: V2CG+CMP, Thoopur, Madurai - Tirumangalam Rd, Tamil Nadu</p>
-      <p>Details: Serves the local Thoppur community, hosts evening and Friday prayers.</p>
+      <p>V2CG+CMP, Thoopur, Madurai - Tirumangalam Rd, Tamil Nadu</p>
     </div>
-
-    <div class="faith-card">
+    <div class="mosque-card">
       <h3>Darussalam Masjid</h3>
-      <p>Address: RXHG+JWP, Tirumangalam, Tamil Nadu 625706</p>
-      <p>Details: Active mosque known for charity events and regular prayers.</p>
+      <p>RXHG+JWP, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="mosque-card">
       <h3>Mohamadhusapuram Jumma Mosque</h3>
-      <p>Address: RXJM+W34, 2nd Street, Mohamed Shah Puram, Tirumangalam, Tamil Nadu 625706</p>
-      <p>Details: Key mosque for the Mohamed Shah Puram area, holds large congregations on Fridays.</p>
+      <p>RXJM+W34, 2nd Street, Mohamed Shah Puram, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="mosque-card">
       <h3>Madina Masjid</h3>
-      <p>Address: Sengulam East Street, 3, Mohamed Shah Puram, Tirumangalam, Tamil Nadu 625706</p>
-      <p>Details: Local mosque serving the Sengulam and surrounding community.</p>
+      <p>Sengulam East Street, 3, Mohamed Shah Puram, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-  </section>
 
-  <!-- Churches Section -->
-  <section class="faith-section">
-    <h2>Churches in Tirumangalam</h2>
-
-    <div class="faith-card">
+    <h2>Churches</h2>
+    <div class="church-card">
       <h3>Our Lady of Immaculate Conception Church</h3>
-      <p>Address: RXFQ+W37, Tirumangalam, Tamil Nadu 625706</p>
+      <p>RXFQ+W37, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="church-card">
       <h3>C.S.I Arputha Nathar Church</h3>
-      <p>Address: Madurai Main Road, Tirumangalam, Madurai, Tamil Nadu 625706</p>
+      <p>Madurai Main Road, Tirumangalam, Madurai, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="church-card">
       <h3>Bethel AG Church</h3>
-      <p>Address: 53A, Ashok Nagar, Tirumangalam, Tamil Nadu 625706</p>
+      <p>53A, Ashok Nagar, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="church-card">
       <h3>NEW LIFE CHURCH</h3>
-      <p>Address: RXFQ+G3P, Arumugam Rd, Tirumangalam, Tamil Nadu 625706</p>
+      <p>RXFQ+G3P, Arumugam Rd, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
-      <h3>The Pentecostal Mission Church - TPM Tirumangalam</h3>
-      <p>Address: R2Q3+422, Tenkasi - Madurai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    <div class="church-card">
+      <h3>The Pentecostal Mission Church - TPM</h3>
+      <p>R2Q3+422, Tenkasi - Madurai Rd, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="church-card">
       <h3>C.S.I Good Shepherd Church</h3>
-      <p>Address: RXFP+4HR, Virudhunagar Rd, Tirumangalam, Madurai, Tamil Nadu 625706</p>
+      <p>RXFP+4HR, Virudhunagar Rd, Tirumangalam, Madurai, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="church-card">
       <h3>Godscapital Church</h3>
-      <p>Address: 236/1 Vadakarai Road, Tirumangalam, Tamil Nadu 625706</p>
+      <p>236/1 Vadakarai Road, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="church-card">
       <h3>Renaissance AG Church</h3>
-      <p>Address: Sankar Nagar, 9th Street, Airport Road, Tirumangalam, Tamil Nadu 625706</p>
+      <p>Sankar Nagar, 9th Street, Airport Road, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="church-card">
       <h3>Faith Word Assembly (New Campus)</h3>
-      <p>Address: Raja Thottam, behind Usilai Road, Tirumangalam, Tamil Nadu 625706</p>
+      <p>Raja Thottam, behind Usilai Road, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="church-card">
       <h3>T.E.L.C Jesus Our Redeemer Church</h3>
-      <p>Address: Government Homeopathy College, Near NGO Nagar, Tirumangalam, Tamil Nadu 625706</p>
+      <p>Government Homeopathy College, Near NGO Nagar, Tirumangalam, Tamil Nadu 625706</p>
     </div>
-
-    <div class="faith-card">
+    <div class="church-card">
       <h3>Immanuel Lutheran Church (I.E.L.C)</h3>
-      <p>Address: RXGR+QMW, Kuliyapuram, Tirumangalam, Tamil Nadu</p>
+      <p>RXGR+QMW, Kuliyapuram, Tirumangalam, Tamil Nadu</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Tirumangalam Town Website</p>
+    <p>&copy; 2025 Tirumangalam Town Website | Designed by You</p>
   </footer>
 </body>
 </html>
