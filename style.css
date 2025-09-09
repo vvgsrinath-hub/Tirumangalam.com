@@ -216,21 +216,21 @@ footer {
   .school-card p {
     font-size: 0.9rem;
   }
-/* College Section Styling */
+/* College Section Styling - Applies on all screens */
 .college-section {
   padding: 20px;
 }
 
 .college-section h2 {
   text-align: center;
-  color: #800000; /* Dark Red color for college heading */
+  color: #800000; /* Dark Red heading */
   margin-bottom: 20px;
 }
 
-/* College Cards */
+/* College Cards - full styling */
 .college-card {
-  background: #fff0f0; /* Light red/pink background for colleges */
-  border-left: 5px solid #800000; /* Left border to distinguish */
+  background: #fff0f0; /* Light pink background */
+  border-left: 5px solid #800000; /* Left red border */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin: 15px auto;
@@ -239,14 +239,9 @@ footer {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.college-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
 .college-card h3 {
   margin-top: 0;
-  color: #b30000; /* Slightly brighter red for the title */
+  color: #b30000; /* Dark red title */
   font-size: 1.2rem;
 }
 
@@ -256,7 +251,12 @@ footer {
   color: #444;
 }
 
-/* Responsive Design for College Cards */
+.college-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .college-card {
     margin: 10px;
