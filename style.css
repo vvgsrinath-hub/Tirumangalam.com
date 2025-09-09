@@ -275,3 +275,76 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+/* ===================================
+   Faith Centres Styling
+=================================== */
+.faith-section {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/* Mosques */
+.faith-section.mosque .faith-card {
+  background: #e6f0ff;      /* Light blue background */
+  border-left: 6px solid #0066cc; /* Blue left border */
+  border-radius: 8px;
+  margin: 15px 0;
+  padding: 15px 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faith-section.mosque .faith-card h3 {
+  color: #004080; /* Dark blue title */
+}
+
+.faith-section.mosque .faith-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Churches */
+.faith-section.church .faith-card {
+  background: #fff0f0;      /* Light pink background */
+  border-left: 6px solid #800000; /* Dark red left border */
+  border-radius: 8px;
+  margin: 15px 0;
+  padding: 15px 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faith-section.church .faith-card h3 {
+  color: #b30000; /* Dark red title */
+}
+
+.faith-section.church .faith-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faith-section .faith-card {
+    flex-direction: column;
+    text-align: center;
+    margin: 10px auto;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faith-section .faith-card {
+    padding: 12px;
+  }
+
+  .faith-section .faith-card h3 {
+    font-size: 1rem;
+  }
+
+  .faith-section .faith-card p {
+    font-size: 0.9rem;
+  }
+}
