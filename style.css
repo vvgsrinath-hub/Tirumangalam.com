@@ -162,3 +162,58 @@ footer {
     padding: 15px;
   }
 }
+
+
+/* 🎓 Education Page - Schools List */
+.education-section {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.school-card {
+  background: #ffffff;
+  border-left: 6px solid #0066cc;
+  margin: 15px 0;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.school-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.school-card h3 {
+  margin: 0 0 8px;
+  color: #004080;
+  font-size: 1.2rem;
+}
+
+.school-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 10px;
+  }
+
+  .school-card {
+    padding: 12px 15px;
+  }
+
+  .school-card h3 {
+    font-size: 1rem;
+  }
+
+  .school-card p {
+    font-size: 0.9rem;
+  }
+}
