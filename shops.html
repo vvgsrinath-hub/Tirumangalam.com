@@ -3,12 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shops & Services - Tirumangalam</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Tirumangalam Shops</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #004080;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background: #0066cc;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      background: #004080;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .shop-card {
+      background: #ffffff;
+      border-left: 6px solid #ff6600;
+      margin: 15px 0;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .shop-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .shop-card h3 {
+      margin: 0 0 8px;
+      color: #ff6600;
+      font-size: 1.2rem;
+    }
+
+    .shop-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul li {
+        margin: 5px 0;
+      }
+
+      .shop-card {
+        padding: 12px 15px;
+      }
+
+      .shop-card h3 {
+        font-size: 1.1rem;
+      }
+
+      .shop-card p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav ul li a {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+
+      .shop-card h3 {
+        font-size: 1rem;
+      }
+
+      .shop-card p {
+        font-size: 0.85rem;
+      }
+
+      section {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Shops & Services</h1>
+    <h1>Tirumangalam Shops</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -18,23 +152,246 @@
         <li><a href="education.html">Education</a></li>
         <li><a href="shops.html" class="active">Shops</a></li>
         <li><a href="transport.html">Transport</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
   </header>
 
-  <section>
-    <h2>Popular Shops & Services</h2>
-    <ul>
-      <li>SPV Torus & Travels – Bus, flight & hotel bookings</li>
-      <li>Shri Ram Transport & Travels – Car & tempo traveller rentals</li>
-      <li>Sangaiya Automobile – Auto-rickshaw service & repairs</li>
-      <li>Local Grocery, Textile, and Medical Shops near bus stand</li>
-    </ul>
+  <section class="shop-section">
+    <h2 style="text-align:center; color:#ff6600;">Popular Shops in Tirumangalam</h2>
+
+    <!-- Shop Cards -->
+    <div class="shop-card">
+      <h3>V.P. Madhura Bakery</h3>
+      <p>57/18, Usilai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>James & Co | Home Appliances Showroom</h3>
+      <p>D.No.327, Usilampatti Road, opp. Canara bank, Tirumangalam, Madurai, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Poorvika Mobiles</h3>
+      <p>No: 294,295&296, V.K.N Complex, Madurai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Ramraj Cotton - Tirumangalam</h3>
+      <p>3/194, Tenkasi - Madurai Rd, near Kappalur, Tollgate, Tirumangalam, Madurai, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>SILVER PALACE</h3>
+      <p>No 505, Madurai Rd, Tirumangalam, Madurai, Tamil Nadu 625006</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Maharaja Fancy Store</h3>
+      <p>RXFP+J2P, Annamalai Doctor Lane, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>SalvoStarS Supermarket</h3>
+      <p>152/1, 152, Madurai Rd, near Salvostore, Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Dhanalakshmi Javuli Stores</h3>
+      <p>126/355, Usilai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Sathya Agencies</h3>
+      <p>DOOR NO 16, USILAMPATTI MAIN ROAD, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>THIRUMALAI SUPERMARKKET</h3>
+      <p>Bus stand, Jawahar Nagar, 3rd street back side, opposite to SMP Mahal, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <!-- Add remaining 35 shops in the same format -->
+    <!-- Example format for remaining shops -->
+    <div class="shop-card">
+      <h3>Thirumalai TRADERS</h3>
+      <p>336, Madurai Rd, near SBI Bank, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>V.P. Madhura Bakery & Restaurant</h3>
+      <p>559, Madurai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Sriram Fancy Store</h3>
+      <p>Kovil Street, No 2, Kamatchi Amman, Usilai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>TRENDS</h3>
+      <p>152, Madurai Rd, Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Classic Gift Center</h3>
+      <p>563, Madurai Rd, Tirumangalam, Madurai, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Sri Sairam Tex – Trendy Clothes for Men, Women & Kids</h3>
+      <p>407/7c, Madurai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Vijay Supermarket Thirumangalam</h3>
+      <p>3/499, Airport Road, Thirumangalam, next to Shankar nagar, Madurai, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Ananya Store</h3>
+      <p>4, Arumugam Rd, Karpaga Nagar, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Karugappilai Rajendra Super Market</h3>
+      <p>RXGQ+2JC, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Nataraja Supermarket</h3>
+      <p>Munchief Court Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Vijayalakshmi Cloth Store - Sarees & Readymade</h3>
+      <p>17, Usilai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>City Mart Supermarket</h3>
+      <p>NO 391, KP complex, old Eb bus stop, Madurai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>G-Shopping</h3>
+      <p>158, Munsif court road, near Jay Ladies Tailor, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Sanjay Store - Aavin Milk Products</h3>
+      <p>24, KTK, Chinnamani St, near Bus Stand, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Thangamayil Jewellery Limited</h3>
+      <p>Canara Bank Opposite, 339, Usilampatti Road, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Peter England Menswear Exclusive Showroom</h3>
+      <p>No.463/8, Madurai Rd, opp. Rajaji Statue, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Rathna Store (Grocery Shop)</h3>
+      <p>Maharaja textiles, 97, Usilai Rd, opposite Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>THIRUMALAI READYMADE</h3>
+      <p>19A, 3rd Street, Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Alfa Garments</h3>
+      <p>Munsif court, Old Number -33, Gandhiji Street, near NS MAHAL, Road, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Thangam Departmental Store</h3>
+      <p>Old TVS showroom, South St, Jaihindpuram, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>RUTHRA LADIES CORNER</h3>
+      <p>Kamachi Amman Kovil, 13, Kamachi Amman Kovil Street, Thirumangalam-Pallapatti Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Chennai Mobiles</h3>
+      <p>Opp. Town Police Station, Madurai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Sree Shivani Store</h3>
+      <p>RXGV+HG8, Kamarajapuram Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Amman Kutty Chutties Baby Store</h3>
+      <p>Bustand back side, 2nd street, near S. V. Clinic, Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>SRI SAI HARI STORES</h3>
+      <p>26/1A1, 5th St, Mohamed Shah Puram, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Om Vinayaga Store</h3>
+      <p>11th St, Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Sri Gurusamy Readymades</h3>
+      <p>K.R Towers, 41, Usilai Rd, Opposite to Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Tanaya Gold Covering</h3>
+      <p>50/4 Veeran Street, Annamalai Doctor Lane, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Thirumalai STORES</h3>
+      <p>Sholavandhan Road, near Sivasakthi Mahal, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>SRI SARASWATHI TEXTILES</h3>
+      <p>Usilai Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Kaladevi Jewellers Thirumangalam</h3>
+      <p>SH73, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>VEERARAGAVAN FURNITURE SHOWROOM</h3>
+      <p>RXFJ+PJ3, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>RR SuperMart</h3>
+      <p>Sengulam east street, 11th solvanthan road, Vagaikulam, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Rani Sweets</h3>
+      <p>Unnamed Road, Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
+    <div class="shop-card">
+      <h3>Apollo Pharmacy Thirumangalam</h3>
+      <p>Shop No.2&3, Arumugam Rd, Tirumangalam, Tamil Nadu 625706</p>
+    </div>
+
   </section>
 
   <footer>
-    <p>&copy; 2025 Tirumangalam Town Website</p>
+    <p>&copy; 2025 Tirumangalam Shops | Designed by You</p>
   </footer>
 </body>
 </html>
