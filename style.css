@@ -1,3 +1,6 @@
+/* ===================================
+   General Body & Header Styles
+=================================== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -24,7 +27,7 @@ nav ul {
   display: flex;
   justify-content: center;
   background: #0066cc;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -67,8 +70,11 @@ footer {
   margin-top: 20px;
 }
 
+/* ===================================
+   Temple Cards
+=================================== */
 .temple-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin: 20px;
@@ -89,9 +95,11 @@ footer {
   flex: 1;
 }
 
-/* Transport Page */
+/* ===================================
+   Transport Cards
+=================================== */
 .transport-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin: 20px;
@@ -112,65 +120,16 @@ footer {
   flex: 1;
 }
 
-/* 📱 Responsive Design */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  .temple-card,
-  .transport-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .temple-card img,
-  .transport-card img {
-    width: 100%;
-    height: auto;
-  }
-
-  .hero h2 {
-    font-size: 1.4rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  nav ul li a {
-    padding: 8px;
-    font-size: 0.9rem;
-  }
-
-  footer {
-    font-size: 0.8rem;
-  }
-
-  section {
-    padding: 15px;
-  }
-}
-
-
-/* 🎓 Education Page - Schools List */
+/* ===================================
+   Education Section
+=================================== */
 .education-section {
   max-width: 1000px;
   margin: 20px auto;
   padding: 10px;
 }
 
+/* Schools */
 .school-card {
   background: #ffffff;
   border-left: 6px solid #0066cc;
@@ -199,38 +158,20 @@ footer {
   line-height: 1.5;
 }
 
-/* 📱 Mobile Responsive */
-@media (max-width: 768px) {
-  .education-section {
-    padding: 10px;
-  }
-
-  .school-card {
-    padding: 12px 15px;
-  }
-
-  .school-card h3 {
-    font-size: 1rem;
-  }
-
-  .school-card p {
-    font-size: 0.9rem;
-  }
-/* College Section Styling - Applies on all screens */
+/* Colleges */
 .college-section {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .college-section h2 {
   text-align: center;
-  color: #800000; /* Dark Red heading */
+  color: #800000;
   margin-bottom: 20px;
 }
 
-/* College Cards - full styling */
 .college-card {
-  background: #fff0f0; /* Light pink background */
-  border-left: 5px solid #800000; /* Left red border */
+  background: #fff0f0;
+  border-left: 5px solid #800000;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin: 15px auto;
@@ -241,7 +182,7 @@ footer {
 
 .college-card h3 {
   margin-top: 0;
-  color: #b30000; /* Dark red title */
+  color: #b30000;
   font-size: 1.2rem;
 }
 
@@ -256,33 +197,78 @@ footer {
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* Responsive Design */
+/* ===================================
+   Responsive Design
+=================================== */
 @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .temple-card,
+  .transport-card,
+  .school-card,
   .college-card {
-    margin: 10px;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px auto;
     padding: 15px;
   }
 
+  .temple-card img,
+  .transport-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .school-card h3,
   .college-card h3 {
     font-size: 1.1rem;
   }
 
+  .school-card p,
   .college-card p {
     font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  .college-card {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul li a {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  .school-card,
+  .college-card,
+  .temple-card,
+  .transport-card {
     padding: 12px;
   }
 
+  .school-card h3,
   .college-card h3 {
     font-size: 1rem;
   }
 
+  .school-card p,
   .college-card p {
     font-size: 0.9rem;
   }
 }
-
