@@ -217,3 +217,71 @@ footer {
     font-size: 0.9rem;
   }
 }
+/* Education Page Styling */
+.school-section, .college-section {
+  padding: 20px;
+}
+
+.school-section h2, .college-section h2 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+/* School & College Cards */
+.school-card, .college-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 15px auto;
+  padding: 20px;
+  max-width: 800px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.school-card:hover, .college-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.school-card h3, .college-card h3 {
+  margin-top: 0;
+  color: #0066cc;
+  font-size: 1.2rem;
+}
+
+.school-card p, .college-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .school-card, .college-card {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .school-card h3, .college-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .school-card p, .college-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .school-card, .college-card {
+    padding: 12px;
+  }
+
+  .school-card h3, .college-card h3 {
+    font-size: 1rem;
+  }
+
+  .school-card p, .college-card p {
+    font-size: 0.9rem;
+  }
+}
