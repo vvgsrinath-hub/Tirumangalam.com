@@ -3,65 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hospitals in Tirumangalam</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #0077b6;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    .hospital-card {
-      display: flex;
-      background: #fff;
-      margin: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      overflow: hidden;
-    }
-    .hospital-card img {
-      width: 250px;
-      height: 200px;
-      object-fit: cover;
-    }
-    .hospital-info {
-      padding: 15px;
-    }
-    .hospital-info h2 {
-      margin-top: 0;
-      color: #0077b6;
-    }
-    .hospital-info p {
-      margin: 5px 0;
-      line-height: 1.5;
-    }
-    strong {
-      color: #333;
-    }
-  </style>
+  <title>Hospitals - Tirumangalam</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Hospitals in Tirumangalam</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="temples.html">Temples</a></li>
+        <li><a href="faith.html">Faith Centres</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="shops.html">Shops</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="hospitals.html" class="active">Hospitals</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Example Hospital -->
-  <section class="hospital-card">
-    <img src="images/hospital-sample.jpg" alt="ABC Hospital">
-    <div class="hospital-info">
-      <h2>ABC Multispeciality Hospital</h2>
-      <p><strong>Location:</strong> Madurai Road, Tirumangalam, Tamil Nadu 625706</p>
-      <p><strong>Specialties:</strong> General Medicine, Pediatrics, Orthopedics</p>
-      <p><strong>Timings:</strong> 24/7 Emergency & Outpatient 9:00 AM – 7:00 PM</p>
-      <p><strong>Contact:</strong> +91 98765 43210</p>
-    </div>
-  </section>
+  <main>
+    <!-- Subam Hospital -->
+    <section class="hospital-card">
+      <img src="images/subam-hospital.jpg" alt="Subam Hospital" class="hospital-img">
+      <div class="hospital-info">
+        <h2>Subam Hospital</h2>
+        <p><strong>Location:</strong> 47, Chinnamani St, Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
+        <p><strong>Specialties:</strong> General Medicine, Emergency Care</p>
+        <p><strong>Timings:</strong> 24/7 Emergency & Outpatient 9:00 AM – 7:00 PM</p>
+        <p><strong>Contact:</strong> Not Available</p>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Tirumangalam Town Website</p>
+  </footer>
 </body>
 </html>
