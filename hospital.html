@@ -1,45 +1,390 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hospitals - Tirumangalam</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Hospitals in Tirumangalam</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@600;700&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body, h1, h2, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo-circle {
+      background: purple;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 8px 14px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .logo-text h1 {
+      font-size: 20px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    .logo-text p {
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Navigation */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li a {
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      color: black;
+    }
+    .nav-links li a.active,
+    .nav-links li a:hover {
+      background: purple;
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #7f3bff, #9f67ff);
+      color: white;
+    }
+    .hero h2 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* Hospital List */
+    .container {
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .hospital-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .hospital-card {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .hospital-card h3 {
+      color: purple;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .hospital-card p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #f7f7f7;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Hospitals in Tirumangalam</h1>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-circle">தி</span>
+      <div class="logo-text">
+        <h1>திருமங்கலம்</h1>
+        <p>Tirumangalam</p>
+      </div>
+    </div>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="temples.html">Temples</a></li>
         <li><a href="faith.html">Faith Centres</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="shops.html">Shops</a></li>
-        <li><a href="transport.html">Transport</a></li>
         <li><a href="hospital.html" class="active">Hospitals</a></li>
+        <li><a href="shops.html">Shops</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="transport.html">Transport</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- Subam Hospital -->
-    <section class="hospital-card">
-      <img src="images/Subam Hospital.png" alt="Subam Hospital" class="hospital-img">
-      <div class="hospital-info">
-        <h2>Subam Hospital</h2>
-        <p><strong>Location:</strong> 47, Chinnamani St, Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
-        <p><strong>Specialties:</strong> General Medicine, Emergency Care</p>
-        <p><strong>Timings:</strong> 24/7 Emergency & Outpatient 9:00 AM – 7:00 PM</p>
-        <p><strong>Contact:</strong> Not Available</p>
-      </div>
-    </section>
-  </main>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Hospitals in Tirumangalam</h2>
+    <p>List of hospitals, clinics, and healthcare centres in and around Tirumangalam</p>
+  </section>
 
+  <!-- Hospital List -->
+  <div class="container">
+    <div class="hospital-list">
+
+      <div class="hospital-card">
+        <h3>SKG (Swarna Kamalam Multispeciality Hospital)</h3>
+        <p>Bus Stand, 19/1, Chinnamani St, Tirumangalam</p>
+        <p>📞 +91 4549 400 800</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Subam Hospital</h3>
+        <p>47, Chinnamani St, Tirumangalam</p>
+        <p>📞 +91 98946 49774</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Government Hospital</h3>
+        <p>Munchief Court Rd, Tirumangalam</p>
+        <p>Government hospital</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Preethashree Hospital</h3>
+        <p>Tirumangalam</p>
+        <p>📞 +91 99408 27789</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>J.V. Hospital</h3>
+        <p>No:5, Arumugam, north, 4th St, Tirumangalam</p>
+        <p>📞 +91 98942 35510</p>
+      </div>
+
+      <div class="hospital-card">
+       <h3>Kasturibai Mohandas Hospital</h3>
+       <p>RXGQ+XHF, Tirumangalam</p>
+       <p>📞 +91 4549 280 444</p> 
+      </div>
+
+      <div class="hospital-card">
+        <h3>FATHIMA HOSPITAL</h3>
+        <p>RXGJ+W3X, Tirumangalam</p>
+        <p>📞 +91 4549 282 209</p>
+      </div>
+      
+      <div class="hospital-card">
+        <h3>Ravi Kala Arunasaleshwarar Hospital</h3>
+        <p>RXGP+H9R, Tirumangalam</p>
+        <p>📞 N/A</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Dr.Maruthupandian Suma Hospital</h3>
+        <p>RXGP+GRC, Tirumangalam</p>
+        <p>📞 N/A</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Moms Hospital</h3>
+        <p>Usilampatti Mainroad, Sengulam, East St, near EB station, Tirumangalam</p>
+        <p>📞 N/A</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Annamalasuvarar Hospital</h3>
+        <p>RXGP+FFV, Tirumangalam</p>
+        <p>📞 +91 77087 06121</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Vaideeshwar Homoeo Clinic</h3>
+        <p>Virudhunagar Rd, Tirumangalam</p>
+        <p>📞 +91 90039 59377</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>A.SUBBRAMANIYAN HOSPITAL</h3>
+        <p>R2W6+3MG, Thirumangalam-Pallapatti Rd, Urappanur</p>
+        <p>📞 N/A</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Mepco Schlenk Hospital</h3>
+        <p>R2V9+W49, Dharmathupatti</p>
+        <p>📞 N/A</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>VELU HOSPITAL</h3>
+        <p>99, MUNSHIEFF COURT ROAD, Tirumangalam</p>
+        <p>📞 +91 98421 68751</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>GURU BONE AND JOINT HOSPITAL</h3>
+        <p>423C , Periyar 2 nd Street, near Shri Thulasimani Iyappan Thiru Kovil, Tirumangalam</p>
+        <p>📞 +91 93602 72814</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Priya Hospital</h3>
+        <p>Madurai Rd, Tirumangalam</p>
+        <p>📞 N/A</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Krishna clinic</h3>
+        <p>1st St, Tirumangalam</p>
+        <p>📞 N/A</p>
+      </div>
+
+      <div class="hospital-card">
+        <h3>Blue berry hospital (AVM)</h3>
+        <p>RXFJ+W3W, Tirumangalam</p>
+        <p>📞 N/A</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Ponnusamy ENT clinic</h3>
+        <p>Munchief Court Rd, Tirumangalam</p>
+        <p>📞 N/A</p>
+      </div>
+      <div class="hospital-card">
+        <h3>AK SURGICAL & DIABETIC CLINIC</h3>
+        <p>9, Bharathiyar 1st St, Tirumangalam</p>
+        <p>📞 +91 81109 11114</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Aravind Eye Clinic - Tirumangalam</h3>
+        <p>Tirumangalam</p>
+        <p>📞 +91 4549 280 230</p>
+      </div>
+      <div class="hospital-card">
+        <h3>GOVERNMENT HOMOEOPATHIC MEDICAL COLLEGE & HOSPITAL</h3>
+        <p>Tirumangalam</p>
+        <p>📞 +91 4549 280 727</p>
+      </div>
+      <div class="hospital-card">
+        <h3>MOMS CLINIC</h3>
+        <p>Christia Mangalam St, Tirumangalam</p>
+        <p>📞 +91 7397 561 678</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Saratha Homeo Clinic</h3>
+        <p>Tirumangalam</p>
+        <p>📞 +91 98428 45846</p>
+      </div>
+      <div class="hospital-card">
+        <h3>SURIYA clinic ORTHO</h3>
+        <p>RXFP+X4M, Annamalai Doctor Lane, Tirumangalam</p>
+        <p>📞 +91 93450 32899</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Chitra Clinic</h3>
+        <P>Plot No 45, Roja Thottam Cholavandan Roead, SH73, Tirumangalam</P>
+        <p>📞 +91 4549 281 711</p>
+      </div>
+      <div class="hospital-card">
+        <h3>ESI DISPENSARY TIRUMANGALAM</h3>
+        <p>104 37, Jawahar Nagar 4th St, Tirumangalam</p>
+        <p>📞 +91 1800 11 2526</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Aathikaalathu Feet reflexology center</h3>
+        <p>Tirumangalam</p>
+        <p>📞 +91 63815 34166</p>
+      </div>
+      <div class="hospital-card">
+        <h3>J K Dental Clinic</h3>
+        <p>29, N N minimart, Jawahar Nagar 8th St, Tirumangalam</p>
+        <p>📞 +91 99421 37583</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Dhanvanthri Nilayam Ayurveda Vaidhyasalai - Tirumangalam</h3>
+        <p>No 112, kattumariyamman kovil street, Tirumangalam</p>
+        <p>📞 +91 83001 47211</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Dr.Nelson Dental Clinic</h3>
+        <P>RXGM+6X4, Munchief Court Rd, Tirumangalam</P>
+        <P>📞 +91 99425 02367</P>
+      </div>
+      <div class="hospital-card">
+        <h3>J.J clinic ( ENT & GENERAL)</h3>
+        <p>RXFP+7HR, CSI Shopping complex, Virudhunagar Rd, Tirumangalam</p>
+        <p>📞 +91 70100 67780</p>
+      </div>
+      <div class="hospital-card">
+        <h3>BALA SKIN CLINIC</h3>
+        <p>6/3, Bharathi 1st St, Tirumangalam</p>
+        <p>📞 +91 88072 52628</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Ayyan Dental & Cosmetology Clinic</h3>
+        <p>Ayyan Complex, No 465-467, Madurai Rd, near Periyar Statue, Tirumangalam</p>
+        <p>📞 +91 88256 51269</p>
+      </div>
+      <div class="hospital-card">
+        <h3>DR.PRAVEEN'S DENTAL AND ORTHODONTIC CENTER (Best Dental Clinic)</h3>
+        <p>308, Usilai Rd, opp. to Sengulam VAO Office, Tirumangalam</p>
+        <p>📞 +91 73389 24487</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Dr. Paul's Dental & Orthodontic Care</h3>
+        <p>49, Jawahar Nagar, 1st Street, Bustand Backside, near Aravind Eye Hospital, Tirumangalam</p>
+        <p>📞 +91 93425 89850</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Prabhu Dental Clinic</h3>
+        <P>29 Bharathi street, opposite to government hospital back gate, Tirumangalam</P>
+        <p>📞 +91 77084 88892</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Shree Sendhoor Dental clinic</h3>
+        <p>SENGULAM EAST, No: 21, 11th STREET, Tirumangalam</p>
+        <p>📞 +91 94868 67779</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Jing-Well Acupuncture Clinic</h3>
+        <p>bus stand, Vinyaga medical Upstairs Near SKG Hospital, Thirumangalam, Madurai</p>
+        <p>📞 +91 99425 30068</p>
+      </div>
+      <div class="hospital-card">
+        <h3>Kalam clinic</h3>
+        <p>	RXGP+77J, Bharathi 1st St, Tirumangalam</p>
+        <P>📞 N/A</P>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Tirumangalam Town Website</p>
+    <p>&copy; 2025 Tirumangalam Town Website | Designed by You</p>
   </footer>
 </body>
 </html>
