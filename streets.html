@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tirumangalam Streets</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@600;700&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* General Reset */
+    body, h1, h2, h3, h4, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo-circle {
+      background: purple;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 8px 14px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .logo-text h1 {
+      font-size: 20px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    .logo-text p {
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Navigation */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li a {
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      color: black;
+    }
+    .nav-links li a.active,
+    .nav-links li a:hover {
+      background: purple;
+      color: white;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #7f3bff, #9f67ff);
+      color: white;
+    }
+    .hero-tamil {
+      font-size: 48px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-weight: 700;
+    }
+    .hero-sub {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    /* Container & Street Cards */
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+    .street-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #fff;
+    }
+    .street-card h3 {
+      margin-top: 0;
+      color: #333;
+      border-bottom: 2px solid #7f3bff;
+      padding-bottom: 8px;
+    }
+    .street-card ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .street-card ul li {
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #f7f7f7;
+      margin-top: 50px;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+      .logo {
+        margin-bottom: 10px;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+      .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-circle">தி</span>
+      <div class="logo-text">
+        <h1>திருமங்கலம்</h1>
+        <p>Tirumangalam</p>
+      </div>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="temples.html">Temples</a></li>
+        <li><a href="faith.html">Faith Centres</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
+        <li><a href="shops.html">Shops</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="streets.html" class="active">Streets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2 class="hero-tamil">திருமங்கலம் வீதிகள்</h2>
+    <h3 class="hero-sub">Street Addresses</h3>
+    <p class="hero-desc">Explore all major streets and their landmarks in Tirumangalam</p>
+  </section>
+
+  <!-- Street Cards -->
+  <div class="container">
+
+    <div class="street-card" id="madurai">
+      <h3>Madurai Rd</h3>
+      <ul>
+        <li>Sub Register Office, Tirumangalam: RXFQ+QFR, Madurai Rd</li>
+        <li>Mejeera Dindugual Biryani: Nirmala School Complex, Madurai Rd</li>
+        <li>RVNL office: 425 A/1, Madurai Rd</li>
+        <li>Saravana Hotel: Bus Stop, Anandha Theatre, Madurai Rd</li>
+        <li>Mojo Multicuisine Restaurant: Madurai Rd, near KVB Bank</li>
+        <li>Sundaravalli Unavagam: PTN Complex, Madurai Rd</li>
+        <li>Sri Muniyandi Vilas: Shop No.537, Madurai Rd, opp. Bus Stand</li>
+        <li>Annai hotel: RX3M+JPX, Service Rd</li>
+        <li>Hotel SRINIVAS: Al-Ameen Complex, Madurai Main Rd</li>
+        <li>Pandian hotel: Madurai 142 A Rajaji, 1st St</li>
+        <li>Sree Bavan: RXHV+62M, Madurai Rd</li>
+        <li>Lakshmi Frame Works: 27, 1thilagar Street</li>
+        <li>MYSON LATHE AND REWINDING WORKS: No 147, Therkku Street, Ganthi Stachu Near, Viruthu, Madurai Rd</li>
+        <li>N A MUTHUKATCHI STORE: 55, Thirumankulam Main Road, Kaikari, Market St</li>
+        <li>NAZAR VEGITABLES: Thirumankulam, 64/1, Vallayalkara Street</li>
+        <li>Sri Valli Mess: Madurai Main Rd</li>
+        <li>Senthil Andavar Snacks: PKN COMPLEX, Jawahar Street</li>
+        <li>Saravana Hotel: Bus Stop, Anandha Theatre, Madurai Rd</li>
+      </ul>
+    </div>
+
+    <div class="street-card" id="usilai">
+      <h3>Usilai Rd</h3>
+      <ul>
+        <li>Muniyandi Vilas: RXFM+VGR, Usilai Rd</li>
+        <li>Time Pause Cafe: Sandhapettai, Usilai Rd, near Surya Mahal</li>
+        <li>Sriram Fancy Store: Kovil Street, No 2, Kamachi Amman, Usilai Rd</li>
+        <li>N. Ramalingam Grocery Shop: #1, Ananadhan Street, Usilai Rd</li>
+        <li>ARUMUGAM TIALOR: No23, Sunniya Si Kovil Street, Thurumagkulam, Usilai Rd, near Danalaskimi Store</li>
+        <li>Sri Vijay Jewellers: Veeran Street, Usilai Rd</li>
+        <li>ABU BROILER: No12, Rajaji Street, Usilai Rd, near Kani Mobile</li>
+      </ul>
+    </div>
+
+    <div class="street-card" id="virudhunagar">
+      <h3>Virudhunagar Rd</h3>
+      <ul>
+        <li>Kadhar Bhai Briyani: RXFP+6FR, Virudhunagar Rd</li>
+        <li>Aprose Tiffin Center: opposite to Keelapallivasal Street Road, Virudhunagar Rd</li>
+        <li>Navata Road Transport: D.NO.316/1, Virudhunagar Rd, opp. P.T.N.OIL MILL</li>
+        <li>Friends Mess, Thirumangalam: Chinnakadai Veedhi, Virudhunagar Rd</li>
+        <li>Taj: Viruthunagar Main Road, Thirumangalam, opp. to Bharat petrol bunk</li>
+        <li>PANDI MOTORS: 14 South Street, Virudhungar Road, Thirumangalam</li>
+        <li>MOWLANA FASHIONS: 18, Pasumpon Nagar 2nd Street, Thirumankulam Main Road, Virudhunagar Rd</li>
+        <li>RAHUL SALOON: 90, Thirumankulam Main, Near Bus Stand Moul Asath Street, Virudhunagar Rd</li>
+        <li>SUNDARAKUMAR: Vegitable Market, 97, Rajaji First Street, Thirumankulam, Virudhunagar Rd</li>
+        <li>Ameen Tiffin And Cool Drinks: No 786, Sholavandhan Road</li>
+      </ul>
+    </div>
+
+    <div class="street-card" id="rajaji">
+      <h3>Rajaji St</h3>
+      <ul>
+        <li>UNGAL SELAVAN MOBILES SEALS ELECTRONIC CENTER: 27/1, Rajaji St</li>
+        <li>Golden fast food restaurants: Rajaji St</li>
+        <li>Pandian hotel: Madurai 142 A Rajaji, 1st St</li>
+        <li>Thangam stores: Rajaji St</li>
+        <li>Ungal Selavan Home Appliances: 109/56, Rajaji 7th Street</li>
+        <li>Sumi home appliances: 69, Rajaji St</li>
+        <li>We Chai: 102, Rajaji St</li>
+        <li>Sundaram jewellers: 34/127, Rajaji St</li>
+        <li>SRI BALAJI TEX: 27/1, Rajaji St</li>
+        <li>RAJAPANDI SWEET STALL: Perumal Kovil, near Rajaji Street</li>
+        <li>TEA BOY: 9, Rajaji St</li>
+        <li>Fruit sticks: 25/1, Rajaji 1st St, near VBK Dal point</li>
+        <li>HAP daily: NO.110, RAJAJI 1ST STREET</li>
+        <li>Kala's Matching Center: RXGP+X8Q, Rajaji St</li>
+        <li>H.Salamathullah Nainar: RXGM+8RX, Rajaji St</li>
+        <li>ABU BROILER: No12, Rajaji Street, Usilai Rd, near Kani Mobile</li>
+        <li>Puppies Corner: 213, Rajaji 1st St</li>
+        <li>Ammayappa store: 106, Rajaji 1st St</li>
+        <li>Ameera Broilers: 130/28, Rajaji First Street, Thirumangulam, near Vegitable Market</li>
+        <li>சுந்தரம் பைனான்ஸ்: RXFM+XPM, Rajaji St</li>
+        <li>BavatharanI Jewel Making: 126, Rajaji 1st St</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tirumangalam Town Website | Designed by You</p>
+  </footer>
+
+</body>
+</html>
