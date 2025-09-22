@@ -4,17 +4,177 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transport - Tirumangalam</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset */
+    body, h1, h2, h3, h4, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo-circle {
+      background: purple;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 8px 14px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .logo-text h1 {
+      font-size: 20px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    .logo-text p {
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Navigation */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      color: black;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+      background: purple;
+      color: white;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #7f3bff, #9f67ff);
+      color: white;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    /* Cards */
+    .transport-card {
+      display: flex;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+    .transport-card img {
+      width: 40%;
+      object-fit: cover;
+    }
+    .transport-info {
+      padding: 20px;
+      flex: 1;
+    }
+    .transport-info h2 {
+      color: purple;
+      margin-bottom: 10px;
+    }
+    .transport-info p {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #f7f7f7;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+      .logo {
+        margin-bottom: 10px;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+      nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+      }
+      .transport-card {
+        flex-direction: column;
+      }
+      .transport-card img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Transport in Tirumangalam</h1>
+    <div class="logo">
+      <div class="logo-circle">தி</div>
+      <div class="logo-text">
+        <h1>திருமங்கலம்</h1>
+        <p>Gateway of Madurai District</p>
+      </div>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="temples.html">Temples</a></li>
         <li><a href="faith.html">Faith Centres</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="shops.html">Shops</a></li>
         <li><a href="transport.html" class="active">Transport</a></li>
@@ -23,10 +183,17 @@
     </nav>
   </header>
 
-  <main>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Transport in Tirumangalam</h1>
+    <p>Bus, Rail, and Air Connectivity</p>
+  </section>
+
+  <!-- Content -->
+  <main class="container">
     <!-- Bus Stand Section -->
     <section class="transport-card">
-      <img src="images/tirumangalam bus Stand .avif" alt="Tirumangalam Bus Stand" class="transport-img">
+      <img src="images/tirumangalam bus Stand .avif" alt="Tirumangalam Bus Stand">
       <div class="transport-info">
         <h2>Tirumangalam Bus Stand</h2>
         <p><strong>Location:</strong> In the center of Tirumangalam town.</p>
@@ -35,15 +202,13 @@
           Virudhunagar, Rajapalayam, and Sivakasi</strong>.  
           Frequent services to <strong>Madurai</strong> city run every 10–15 minutes.
         </p>
-        <p>
-          The bus stand also has shops, waiting areas, and auto rickshaw facilities.
-        </p>
+        <p>The bus stand also has shops, waiting areas, and auto rickshaw facilities.</p>
       </div>
     </section>
 
     <!-- Railway Station Section -->
     <section class="transport-card">
-      <img src="images/tirumangalam railway stop.jpeg" alt="Tirumangalam Railway Station" class="transport-img">
+      <img src="images/tirumangalam railway stop.jpeg" alt="Tirumangalam Railway Station">
       <div class="transport-info">
         <h2>Tirumangalam Railway Station</h2>
         <p><strong>Station Code:</strong> TMQ</p>
@@ -57,18 +222,19 @@
 
     <!-- Airport Section -->
     <section class="transport-card">
-      <img src="images/madurai airport.jpeg" alt="Madurai Airport" class="transport-img">
+      <img src="images/madurai airport.jpeg" alt="Madurai Airport">
       <div class="transport-info">
         <h2>Nearest Airport</h2>
         <p><strong>Madurai International Airport</strong> is about <strong>20 km</strong> from Tirumangalam.</p>
         <p>
-          Daily flights are available to <strong>Chennai, Bengaluru, Hyderabad, Delhi, and international
-          destinations like Dubai and Singapore</strong>.
+          Daily flights are available to <strong>Chennai, Bengaluru, Hyderabad, Delhi</strong>,  
+          and international destinations like <strong>Dubai and Singapore</strong>.
         </p>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Tirumangalam Town Website</p>
   </footer>
