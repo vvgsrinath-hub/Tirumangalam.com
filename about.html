@@ -4,32 +4,158 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Tirumangalam</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@600;700&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
+    /* General Reset */
+    body, h1, h2, h3, h4, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo-circle {
+      background: purple;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 8px 14px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .logo-text h1 {
+      font-size: 20px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    .logo-text p {
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Navigation */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li a {
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      color: black;
+    }
+    .nav-links li a.active,
+    .nav-links li a:hover {
+      background: purple;
+      color: white;
+    }
+
+    /* Page Hero */
+    .page-hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #7f3bff, #9f67ff);
+      color: white;
+    }
+    .page-hero h2 {
+      font-size: 48px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-weight: 700;
+    }
+    .page-hero p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* About Container */
     .about-container {
       display: grid;
       gap: 20px;
-      padding: 20px;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
     .about-card {
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 25px;
+      transition: transform 0.3s;
+    }
+    .about-card:hover {
+      transform: translateY(-5px);
     }
     .about-card h2 {
-      margin-top: 0;
-      color: #004080;
+      margin-bottom: 12px;
+      color: purple;
+      font-size: 22px;
+    }
+    .about-card p,
+    .about-card ul {
+      font-size: 16px;
+      color: #444;
     }
     .about-card ul {
       padding-left: 20px;
     }
     .about-icon {
-      font-size: 1.5em;
-      margin-right: 8px;
-      color: #0066cc;
+      margin-right: 6px;
     }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #f7f7f7;
+      margin-top: 50px;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+      .logo {
+        margin-bottom: 10px;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+      .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+      }
+      .page-hero h2 {
+        font-size: 32px;
+      }
       .about-container {
         grid-template-columns: 1fr;
       }
@@ -42,22 +168,38 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>About Tirumangalam</h1>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-circle">தி</span>
+      <div class="logo-text">
+        <h1>திருமங்கலம்</h1>
+        <p>Tirumangalam</p>
+      </div>
+    </div>
+
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="temples.html">Temples</a></li>
         <li><a href="faith.html">Faith Centres</a></li>
-       <li><a href="education.html">Education</a></li>
+         <li><a href="hospital.html">Hospitals</a></li>
         <li><a href="shops.html">Shops</a></li>
+        <li><a href="education.html">Education</a></li>
         <li><a href="transport.html">Transport</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h2>About Tirumangalam</h2>
+    <p>History, culture, and heritage of this sacred town</p>
+  </section>
+
+  <!-- About Content -->
   <main>
     <div class="about-container">
       <div class="about-card">
@@ -98,6 +240,7 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Tirumangalam Town Website | Designed by You</p>
   </footer>
