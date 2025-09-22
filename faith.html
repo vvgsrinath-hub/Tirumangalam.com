@@ -4,63 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faith Centres - Tirumangalam</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@600;700&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* General Reset */
+    body, h1, h2, h3, h4, p, ul {
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
       background: #f9f9f9;
       color: #333;
+      line-height: 1.6;
     }
 
-    header {
-      background: #004080;
-      color: white;
-      padding: 15px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
+    /* Header */
+    .header {
       display: flex;
-      justify-content: center;
-      background: #0066cc;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
-    nav ul li {
-      margin: 0 10px;
+    .logo {
+      display: flex;
+      align-items: center;
     }
-
-    nav ul li a {
+    .logo-circle {
+      background: purple;
       color: white;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 8px 14px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .logo-text h1 {
+      font-size: 20px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    .logo-text p {
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Navigation */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li a {
       text-decoration: none;
-      padding: 10px 15px;
-      display: block;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      color: black;
+    }
+    .nav-links li a.active,
+    .nav-links li a:hover {
+      background: purple;
+      color: white;
     }
 
-    nav ul li a.active,
-    nav ul li a:hover {
-      background: #004080;
-      border-radius: 5px;
-    }
-
+    /* Section */
     section {
       padding: 20px;
-    }
-
-    footer {
-      background: #004080;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
     }
 
     /* Faith Cards */
@@ -82,11 +96,11 @@
     }
 
     .mosque-card {
-      border-color: #0066cc; /* Blue for mosques */
+      border-color: #0066cc;
     }
 
     .church-card {
-      border-color: #800000; /* Dark red for churches */
+      border-color: #800000;
     }
 
     .mosque-card h3,
@@ -117,69 +131,65 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      nav ul li {
-        margin: 5px 0;
-      }
-
-      .mosque-card,
-      .church-card {
-        text-align: center;
-      }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #f7f7f7;
+      margin-top: 50px;
     }
 
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.5rem;
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
       }
-
-      nav ul li a {
-        padding: 8px;
-        font-size: 0.9rem;
+      .logo {
+        margin-bottom: 10px;
       }
-
-      footer {
-        font-size: 0.8rem;
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
       }
-
-      section {
-        padding: 15px;
-      }
-
-      .mosque-card h3,
-      .church-card h3 {
-        font-size: 1rem;
-      }
-
-      .mosque-card p,
-      .church-card p {
-        font-size: 0.9rem;
+      .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Faith Centres in Tirumangalam</h1>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-circle">தி</span>
+      <div class="logo-text">
+        <h1>திருமங்கலம்</h1>
+        <p>Tirumangalam</p>
+      </div>
+    </div>
+
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="temples.html">Temples</a></li>
         <li><a href="faith.html" class="active">Faith Centres</a></li>
+         <li><a href="hospital.html">Hospitals</a></li>
+         <li><a href="shops.html">Shops</a></li>
         <li><a href="education.html">Education</a></li>
-        <li><a href="shops.html">Shops</a></li>
         <li><a href="transport.html">Transport</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Faith Section -->
   <section class="faith-section">
     <h2>Masjids</h2>
     <div class="mosque-card">
@@ -258,6 +268,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Tirumangalam Town Website | Designed by You</p>
   </footer>
