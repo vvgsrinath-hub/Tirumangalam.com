@@ -1,143 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Education in Tirumangalam</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts (same as index) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent: purple;      /* nav hover/active */
+      --primary: #7f3bff;    /* hero / card accent */
+      --muted-bg: #f7f7f7;
+    }
+
+    /* Reset & base */
+    *{box-sizing:border-box}
+    body, h1, h2, h3, p, ul { margin:0; padding:0; }
+    body{
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color:#222;
+      line-height:1.6;
+    }
+
+    /* Header (index-style) */
+    .header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:#fff;
+      padding:15px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .logo-circle{
+      background:var(--accent);
+      color:#fff;
+      font-weight:700;
+      font-size:20px;
+      padding:8px 12px;
+      border-radius:50%;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .logo-text h1{
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size:20px;
+      line-height:1;
+    }
+    .logo-text p{
+      font-size:12px;
+      color:#666;
+      margin-top:2px;
+    }
+
+    /* Navigation (index look) */
+    nav { }
+    .nav-links{
+      list-style:none;
+      display:flex;
+      gap:20px;
+      align-items:center;
+      margin:0;
+      padding:0;
+    }
+    .nav-links li a{
+      text-decoration:none;
+      font-weight:500;
+      padding:8px 12px;
+      border-radius:8px;
+      transition: all .25s ease;
+      color:#111;
+      display:inline-block;
+    }
+    .nav-links li a:hover,
+    .nav-links li a.active{
+      background:var(--accent);
+      color:#fff;
+    }
+
+    /* Hero (index-like) */
+    .hero{
+      text-align:center;
+      padding:48px 20px;
+      background: linear-gradient(135deg, #7f3bff 0%, #9f67ff 100%);
+      color:#fff;
+    }
+    .hero .hero-tamil{
+      font-family:'Noto Sans Tamil', sans-serif;
+      font-size:42px;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+    .hero .hero-sub{
+      font-size:20px;
+      margin-bottom:6px;
+      opacity:0.95;
+    }
+    .hero .hero-desc{
+      font-size:14px;
+      opacity:0.95;
+    }
+
+    /* Container */
+    .container{
+      max-width:1200px;
+      margin:28px auto;
+      padding:0 20px;
+    }
+
+    /* Section title */
+    .section-title{
+      text-align:center;
+      color:var(--primary);
+      font-size:22px;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    /* Grid & card */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap:18px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:12px;
+      padding:16px;
+      box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+      transition: transform .16s ease, box-shadow .16s ease;
+      border-left: 6px solid var(--primary);
+    }
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(16,24,40,0.08);
+    }
+    .card h3{
+      font-size:16px;
+      margin-bottom:8px;
+      color:var(--primary);
+      font-weight:600;
+    }
+    .card p{
+      margin:4px 0;
+      font-size:14px;
+      color:#444;
+    }
+
+    /* Footer */
+    footer{
+      text-align:center;
+      padding:18px 10px;
+      background:var(--muted-bg);
+      margin-top:30px;
+      color:#333;
+      font-size:14px;
+    }
+
+    /* Responsive nav & layout */
+    @media (max-width: 820px){
+      .header{ padding:16px 18px; flex-direction:column; align-items:flex-start; gap:12px; }
+      .nav-links{ flex-direction:column; width:100%; gap:8px; }
+      .nav-links li a{ padding:10px; width:100%; box-sizing:border-box; }
+    }
+    @media (max-width:480px){
+      .hero .hero-tamil{ font-size:28px; }
+      .hero { padding:34px 12px; }
+      .container { padding: 0 14px; }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Education in Tirumangalam</h1>
-    <nav>
-      <ul>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <div class="logo-circle">தி</div>
+      <div class="logo-text">
+        <h1>திருமங்கலம்</h1>
+        <p>Tirumangalam</p>
+      </div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="temples.html">Temples</a></li>
         <li><a href="faith.html">Faith Centres</a></li>
-        <li><a href="education.html" class="active">Education</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
         <li><a href="shops.html">Shops</a></li>
+        <li><a href="education.html" class="active">Education</a></li>
         <li><a href="transport.html">Transport</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- Schools Section -->
-    <section class="school-section">
-      <h2>Schools in Tirumangalam</h2>
+  <!-- Hero -->
+  <section class="hero" role="region" aria-label="Intro">
+    <div class="hero-tamil">திருமங்கலம்</div>
+    <div class="hero-sub">Education</div>
+    <div class="hero-desc">Schools, colleges and educational institutions in and around Tirumangalam</div>
+  </section>
 
-      <div class="school-card">
+  <!-- Main content -->
+  <main class="container">
+    <!-- Schools -->
+    <h2 class="section-title">Schools in Tirumangalam</h2>
+    <div class="grid" role="list">
+      <div class="card" role="listitem">
         <h3>NRM Kids</h3>
         <p><strong>Address:</strong> 3/17-D/2, Madurai Road Maravankulam, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>NRM Dream International School</h3>
         <p><strong>Address:</strong> Usilampatti Road, Sathangudi, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>PKN Matriculation Higher Secondary School</h3>
         <p><strong>Address:</strong> RXFP+977, SH73, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>Linga Matriculation School</h3>
         <p><strong>Address:</strong> RXHQ+P26, Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>Anuraj Nursery Primary School</h3>
         <p><strong>Address:</strong> RXJP+6R5, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>Sri Krishna Vidiyal Smart School</h3>
         <p><strong>Address:</strong> RXHQ+Q74, Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>PKN Primary School</h3>
         <p><strong>Address:</strong> NH 7, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>P.K.N. Boys Higher Secondary School</h3>
         <p><strong>Address:</strong> RXGQ+FPG, Virudhunagar Rd, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>PKN Vidyalaya CBSE (Senior Secondary)</h3>
         <p><strong>Address:</strong> R288+53R, Vadagarai, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>PKN Girls Higher Secondary School</h3>
         <p><strong>Address:</strong> RXCJ+QMC, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>Shalom Nursery and Primary School</h3>
         <p><strong>Address:</strong> Jawahar Nagar, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="school-card">
+      <div class="card">
         <h3>St Francis Matriculation Higher Secondary School</h3>
         <p><strong>Address:</strong> RXFQ+V6W, Virudhunagar Rd, Tirumangalam, Madurai, Tamil Nadu 625706</p>
       </div>
-    </section>
+    </div>
 
-    <!-- Colleges Section -->
-    <section class="college-section">
-      <h2>Colleges in Tirumangalam</h2>
-
-      <div class="college-card">
+    <!-- Colleges -->
+    <h2 class="section-title" style="margin-top:28px">Colleges in Tirumangalam</h2>
+    <div class="grid" role="list">
+      <div class="card">
         <h3>Annai Fathima College of Arts and Science</h3>
         <p><strong>Address:</strong> RX54+32M, Fatima Nagar, Alampatti, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="college-card">
+      <div class="card">
         <h3>Government Arts and Science College, Kappalur Thirumangalam</h3>
         <p><strong>Address:</strong> V228+R88, Tenkasi - Madurai Rd, Dharmathupatti, Tamil Nadu 625008</p>
       </div>
 
-      <div class="college-card">
+      <div class="card">
         <h3>PKN Arts and Science College</h3>
         <p><strong>Address:</strong> R287+66Q, Vadagarai, Tamil Nadu 625706</p>
       </div>
 
-      <div class="college-card">
+      <div class="card">
         <h3>Meenammal College of Education for Women</h3>
         <p><strong>Address:</strong> T.Kunnathur, NH-208, Kollam Thirumangalam Rd, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="college-card">
+      <div class="card">
         <h3>CSC (Computer Science College)</h3>
         <p><strong>Address:</strong> KR Towers, Usilai Road, Thirumangalam-Pallapatti Rd, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="college-card">
+      <div class="card">
         <h3>CSC Computer Software College</h3>
         <p><strong>Address:</strong> PTN Complex, Madurai Rd, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="college-card">
+      <div class="card">
         <h3>Government Homeopathy Medical College</h3>
         <p><strong>Address:</strong> RXJR+VVX, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="college-card">
+      <div class="card">
         <h3>Trinity Allied Health Sciences Institution</h3>
         <p><strong>Address:</strong> 9, Jawahar Nagar 10th St, Tirumangalam, Tamil Nadu 625706</p>
       </div>
 
-      <div class="college-card">
+      <div class="card">
         <h3>Manikam Ramaswami College of Arts and Science (MRCAS)</h3>
         <p><strong>Address:</strong> Pamban Swamy Nagar, Thiruparankundram, Tamil Nadu 625005</p>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
