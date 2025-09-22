@@ -3,18 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mukthi Nilayam Temple - Tirumangalam</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Temples in Tirumangalam</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@600;700&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo-circle {
+      background: purple;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 8px 14px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .logo-text h1 {
+      font-size: 20px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    .logo-text p {
+      font-size: 12px;
+      color: #555;
+    }
+
+   .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+    .nav-links li a {
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      color: black;
+    }
+    .nav-links li a.active,
+    .nav-links li a:hover {
+      background: purple;
+      color: white;
+    }
+
+
+    /* Main */
+    main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4a148c;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      text-align: left;
+      padding: 10px;
+    }
+
+    th {
+      background: #6a1b9a;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background: #f3e5f5;
+    }
+
+    tr:hover {
+      background: #e1bee7;
+      transition: 0.3s;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      background: #4a148c;
+      color: #fff;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+      .logo {
+        margin-bottom: 10px;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+      .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Mukthi Nilayam Temple</h1>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-circle">தி</span>
+      <div class="logo-text">
+        <h1>திருமங்கலம்</h1>
+        <p>Tirumangalam</p>
+      </div>
+    </div>
+
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="temples.html" class="active">Temples</a></li>
         <li><a href="faith.html">Faith Centres</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="shops.html">Shops</a></li>
         <li><a href="transport.html">Transport</a></li>
@@ -23,137 +171,56 @@
     </nav>
   </header>
 
+  <!-- Main -->
   <main>
-    <section class="temple-card">
-      <img src="images/Mukthi_Nilayam.jpg" alt="Mukthi Nilayam Temple" class="temple-img">
-      <div class="temple-info">
-        <h2>Sathya Yuga Srishti Temple (Mukthi Nilayam)</h2>
-        <p><strong>Location:</strong> Rayapalayam Village Road, East Street, Melakkottai, Tamil Nadu – 625706</p>
-        <p><strong>Contact:</strong> +91 94430 32619 | satyaamirth1938@gmail.com</p>
-        <p><strong>Timings:</strong> 8:00 AM – 8:00 PM</p>
-        <p>
-          Mukthi Nilayam, also called <em>Sathya Yuga Srishti Temple</em>, is a unique spiritual complex
-          housing <strong>127 mini-temples</strong> and over <strong>500 statues</strong> of Hindu deities,
-          Jesus, Buddha, and the Navagrahas (astrological planets). Entry is free, while pooja fees apply.
-        </p>
-      </div>
-    </section>
-    <section class="temple-card">
-  <img src="images/perumal-temple.webp" alt="Perumal Temple, Ganapathy Nagar" class="temple-img">
-  <div class="temple-info">
-    <h2>Perumal Temple, Ganapathy Nagar</h2>
-    <p><strong>Location:</strong> Ganapathy Nagar, Tirumangalam, Tamil Nadu – 625706</p>
-    <p><strong>Timings (approx.):</strong> Open until 9:00 PM (subject to change)</p>
-    <p><strong>Rating:</strong> Around 4.2/5 (based on local listings)</p>
-    <p>This local shrine draws devotees for its serene atmosphere and traditional worship of Lord Perumal.</p>
-  </div>
-</section>
-    <section class="temple-card">
-  <img src="images/meenakshi amman.jpeg" alt="Meenakshi Amman Temple, Tirumangalam" class="temple-img">
-  <div class="temple-info">
-    <h2>Sri Meenakshi Amman Temple</h2>
-    <p><strong>Location:</strong> SH-73, Tirumangalam, Tamil Nadu – 625706</p>
-    <p>
-      A sacred shrine dedicated to Goddess Meenakshi Amman, revered as the divine mother.
-      Devotees believe that worshipping here brings prosperity, good health, and blessings
-      for family harmony.
-    </p>
-    <p><strong>Major Festivals:</strong> Navaratri, Aadi Pooram, and the annual temple festival.</p>
-  </div>
-</section>
-    <section class="temple-card">
-  <img src="images/Sri Bhadrakali Amman Temple.jpeg" alt="Sri Pathrakali Mariamman Temple, Jaihindpuram" class="temple-img">
-  <div class="temple-info">
-    <h2>Sri Pathrakali Mariamman Temple</h2>
-    <p><strong>Location:</strong> Venkatasamuthiram Geramam, Jaihindpuram, Tirumangalam, Tamil Nadu – 625706</p>
-    <p>
-      A sacred shrine dedicated to Goddess Pathrakali Mariamman, revered for blessings of prosperity, health, and family well-being.
-    </p>
-    <p><strong>Major Festival:</strong> Vaigasi Mahorchavam, celebrated with grandeur attracting devotees from surrounding regions.</p>
-  </div>
-</section>
-<section class="temple-card">
-  <img src="images/KAMACHI AMMAN KOVIL.jpg" alt="Kamatchi Amman Temple, Alampatti, Madurai" class="temple-img">
-  <div class="temple-info">
-    <h2>Kamatchi Amman Temple</h2>
-    <p><strong>Location:</strong> Karisalkalampatti, Alampatti, Madurai – 625706</p>
-    <p><strong>Deity:</strong> Goddess Kamatchi (a form of Goddess Parvati)</p>
-    <p><strong>Significance:</strong> A revered local shrine dedicated to Goddess Kamatchi, known for her blessings of fertility, prosperity, and spiritual well-being.</p>
-    <p><strong>Timings:</strong> Open from 6:00 AM to 9:00 PM</p>
-    <p><strong>Rating:</strong> 5.0/5 (based on local reviews)</p>
-  </div>
-</section>
-<section class="temple-card">
-  <img src="images/Arulmigu Subramaniya Swami Temple.jpg" alt="Arulmigu Subramaniya Swamy Temple, Thiruparankundram" class="temple-img">
-  <div class="temple-info">
-    <h2>Arulmigu Subramaniya Swamy Temple</h2>
-    <p><strong>Location:</strong> 146a, Periya Ratha Veethi, Thiruparankundram, Madurai – 625005</p>
-    <p><strong>Deity:</strong> Lord Murugan and Goddess Deivayanai</p>
-    <p><strong>Significance:</strong> One of the six sacred abodes of Lord Murugan, believed to be the site of his marriage to Goddess Deivayanai.</p>
-    <p><strong>Timings:</strong> Open daily from 5:00 AM to 1:00 PM and from 4:00 PM to 8:30 PM</p>
-    <p><strong>Festivals:</strong> Vaikasi Visakam, Avani Festival, Skanda Sasti Festival, Masi Festival</p>
-  </div>
-</section>
-<section class="temple-card">
-  <img src="images/Arulmigu Immaiyilum Nanmai Tharuvar Temple.jpg" alt="Arulmigu Inmaiyil Nanmai Tharuvar Temple, Madurai" class="temple-img">
-  <div class="temple-info">
-    <h2>Arulmigu Inmaiyil Nanmai Tharuvar Temple</h2>
-    <p><strong>Location:</strong> 15, Arisekara St, Periyar, Madurai Main, Madurai, Tamil Nadu 625001</p>
-    <p><strong>Deity:</strong> Lord Shiva (Shivalingam) and Goddess Parvati</p>
-    <p><strong>Significance:</strong> A revered local shrine dedicated to Lord Shiva and Goddess Parvati, known for their unique worship of the Shivalingam.</p>
-    <p><strong>Timings:</strong> Open daily from 6:45 AM to 12:00 PM and from 4:30 PM to 9:00 PM</p>
-    <p><strong>Contact:</strong> +91 94434 55311</p>
-  </div>
-</section>
-<section class="temple-card">
-  <img src="images/Vinayagar-Temple.png" alt="Vinayagar Temple">
-  <div class="temple-info">
-    <h2>Vinayagar Temple</h2>
-    <p><strong>Location:</strong> RXFR+486, Karpaga Nagar Rd, PCM Nagar, Tirumangalam, Tamil Nadu 625706</p>
-    <p><strong>Deity:</strong> Lord Ganesha (Vinayagar)</p>
-    <p><strong>Significance:</strong> A local shrine dedicated to Lord Ganesha, worshipped as the remover of obstacles and the harbinger of wisdom and prosperity.</p>
-    <p><strong>Timings:</strong> Open daily from 6:00 AM to 12:00 PM and from 4:00 PM to 8:00 PM</p>
-    <p><strong>Contact:</strong> 09791039010</p>
-  </div>
-</section>
-    <section class="temple-card">
-  <img src="images/Sri Bhadrakali Amman Temple.png" alt="Sri Bhadrakali Amman Temple">
-  <div class="temple-info">
-    <h2>Sri Bhadrakali Amman Temple</h2>
-    <p><strong>Location:</strong> RXCH+R44, Venkatasamuthiram Geramam, Patrakali Mariyamman Temple Road, Jaihindpuram, Tirumangalam, Tamil Nadu 625706</p>
-    <p><strong>Deity:</strong> Goddess Bhadrakali Amman</p>
-    <p><strong>Significance:</strong> A powerful temple dedicated to Goddess Bhadrakali, revered for granting protection, strength, and prosperity to devotees.</p>
-    <p><strong>Timings:</strong> Open daily from 6:00 AM to 12:00 PM and from 4:30 PM to 8:00 PM</p>
-    <p><strong>Contact:</strong> Not available</p>
-  </div>
-</section>
-<section class="temple-card">
-  <img src="images/Shri Kumaran Kovil.png" alt="Shri Kumaran Kovil">
-  <div class="temple-info">
-    <h2>Shri Kumaran Kovil</h2>
-    <p><strong>Location:</strong> RXFJ+2MG, Tirumangalam, Tamil Nadu 625706</p>
-    <p><strong>Deity:</strong> Lord Murugan (Kumaran)</p>
-    <p><strong>Significance:</strong> A popular temple dedicated to Lord Murugan, worshipped for wisdom, courage, and prosperity. It is a revered place for devotees seeking blessings for success and well-being.</p>
-    <p><strong>Timings:</strong> Open daily from 6:00 AM to 12:00 PM and from 4:30 PM to 8:00 PM</p>
-    <p><strong>Contact:</strong> Not available</p>
-  </div>
-</section>
-    <section class="temple-card">
-  <img src="images/Railway Station Vinayagar Temple.png" alt="Railway Station Vinayagar Temple">
-  <div class="temple-info">
-    <h2>Railway Station Vinayagar Temple</h2>
-    <p><strong>Location:</strong> RXFQ+HQH, NH 44, Tirumangalam, Tamil Nadu 625706</p>
-    <p><strong>Deity:</strong> Lord Vinayagar (Ganesha)</p>
-    <p><strong>Significance:</strong> A small yet highly visited shrine near the railway station, where devotees pray to Lord Vinayagar for safe journeys and removal of obstacles.</p>
-    <p><strong>Timings:</strong> Open daily from 6:00 AM to 11:00 AM and from 5:00 PM to 8:00 PM</p>
-    <p><strong>Contact:</strong> Not available</p>
-  </div>
-</section>
+    <h2>Location Details</h2>
 
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Meenakshi Amman Temple</td><td>RXFJ+RMM, SH73</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Bhadrakali Amman Temple</td><td>RXCH+R44, Patrakali Mariyamman temple road</td><td>Tirumangalam</td></tr>
+        <tr><td>Shri Kumaran Kovil</td><td>RXFJ+2MG</td><td>Tirumangalam</td></tr>
+        <tr><td>Perumal Temple</td><td>RXHP+699</td><td>Tirumangalam</td></tr>
+        <tr><td>KAMACHI AMMAN KOVIL</td><td>Kamatchi Amman Temple</td><td>Tirumangalam</td></tr>
+        <tr><td>Kali Amman Kovil</td><td>RXHP+FCG</td><td>Tirumangalam</td></tr>
+        <tr><td>Murugan Temple</td><td>RXJP+FP3</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Pathrakali Amman Kovil</td><td>RXGJ+G8R</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Meenakshi Sundareswarar Temple</td><td>Madurai Main Road</td><td>Tirumangalam</td></tr>
+        <tr><td>Shri Mariamman Temple</td><td>RXXH+2WF</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Kamakshi Amman Temple</td><td>Market Street</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Anjaneyar Temple</td><td>RXXP+QMG</td><td>Tirumangalam</td></tr>
+        <tr><td>Shri Bhagavathi Amman Temple</td><td>RXXP+4HF</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Dharmaraja Temple</td><td>RXRG+W7C</td><td>Tirumangalam</td></tr>
+        <tr><td>Shri Ayyanar Temple</td><td>RXQH+F94</td><td>Tirumangalam</td></tr>
+        <tr><td>Kalyana Venkateswara Perumal Temple</td><td>Madurai Road</td><td>Tirumangalam</td></tr>
+        <tr><td>Shri Narasimha Swamy Temple</td><td>RXWR+H54</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Lakshmi Narayanar Temple</td><td>RXRH+XPF</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Veerabhadra Swamy Temple</td><td>RXQP+VM8</td><td>Tirumangalam</td></tr>
+        <tr><td>Shri Karuppasamy Temple</td><td>RXPP+38J</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Ellaiamman Temple</td><td>RXMF+WQC</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Kaliamman Temple</td><td>RXNH+GR8</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Chokkanathar Temple</td><td>RXMJ+X54</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Muthumariamman Temple</td><td>RXNF+2PX</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Balasubramaniya Swamy Temple</td><td>RXM4+W94</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Valli Devasena Subramaniyar Temple</td><td>RXM7+HF3</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Periyanayaki Amman Temple</td><td>RXM5+PQ2</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Azhagiyanayaki Amman Temple</td><td>RXM6+HRX</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Adi Muthumariamman Temple</td><td>RXM8+4H9</td><td>Tirumangalam</td></tr>
+        <tr><td>Sri Kaliamman Kovil</td><td>RXM2+H79</td><td>Tirumangalam</td></tr>
+      </tbody>
+    </table>
   </main>
 
   <footer>
-    <p>&copy; 2025 Tirumangalam Town Website</p>
+    <p>&copy; 2025 Tirumangalam Temple Guide</p>
   </footer>
+
 </body>
 </html>
