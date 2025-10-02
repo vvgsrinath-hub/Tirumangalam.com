@@ -72,6 +72,15 @@
       color: white;
     }
 
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
     /* Hero Section */
     .hero {
       text-align: center;
@@ -128,56 +137,62 @@
       background: #f7f7f7;
       margin-top: 50px;
     }
+
     /* Mobile Styles */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 20px;
+      }
 
-  /* Logo stays on top */
-  .logo {
-    margin-bottom: 10px;
-  }
+      /* Show hamburger button */
+      .menu-toggle {
+        display: block;
+      }
 
-  /* Navigation changes */
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  .nav-links li a {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-  }
+      /* Hide nav links initially */
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+      }
 
-  /* Hero Section */
-  .hero {
-    padding: 50px 15px;
-  }
-  .hero-tamil {
-    font-size: 40px;
-  }
-  .hero-sub {
-    font-size: 20px;
-  }
-  .hero-desc {
-    font-size: 16px;
-  }
+      /* Show nav when active */
+      .nav-links.active {
+        display: flex;
+      }
 
-  /* Stats Section */
-  .stats {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .stat-box {
-    width: 100%;
-  }
-}
+      .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+      }
 
+      .hero {
+        padding: 50px 15px;
+      }
+      .hero-tamil {
+        font-size: 40px;
+      }
+      .hero-sub {
+        font-size: 20px;
+      }
+      .hero-desc {
+        font-size: 16px;
+      }
+
+      .stats {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .stat-box {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -191,13 +206,16 @@
       </div>
     </div>
 
+    <!-- Hamburger button -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
     <nav>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navMenu">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="temples.html">Temples</a></li>
         <li><a href="faith.html">Faith Centres</a></li>
-         <li><a href="hospital.html">Hospitals</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
         <li><a href="shops.html">Shops</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="transport.html">Transport</a></li>
@@ -234,5 +252,11 @@
   <footer>
     <p>&copy; 2025 Tirumangalam Town Website | Designed by You</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
