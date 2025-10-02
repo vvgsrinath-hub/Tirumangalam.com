@@ -29,6 +29,7 @@
       background: #fff;
       padding: 15px 40px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
     }
     .logo {
       display: flex;
@@ -79,6 +80,7 @@
       cursor: pointer;
       background: none;
       border: none;
+      margin-left: auto;
     }
 
     /* Hero Section */
@@ -140,57 +142,41 @@
 
     /* Mobile Styles */
     @media (max-width: 768px) {
-      .header {
-        flex-direction: row;
-        align-items: center;
-        padding: 15px 20px;
-      }
-
-      /* Show hamburger button */
       .menu-toggle {
         display: block;
       }
 
-      /* Hide nav links initially */
       .nav-links {
         display: none;
         flex-direction: column;
-        gap: 10px;
+        background: #fff;
         width: 100%;
-        margin-top: 10px;
+        position: absolute;
+        top: 70px;   /* just below header */
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 999;
       }
 
-      /* Show nav when active */
-      .nav-links.active {
-        display: flex;
+      .nav-links li {
+        width: 100%;
       }
 
       .nav-links li a {
         display: block;
         width: 100%;
-        padding: 10px;
+        padding: 12px 20px;
         text-align: left;
+        border-radius: 0;
       }
 
-      .hero {
-        padding: 50px 15px;
-      }
-      .hero-tamil {
-        font-size: 40px;
-      }
-      .hero-sub {
-        font-size: 20px;
-      }
-      .hero-desc {
-        font-size: 16px;
+      .nav-links.active {
+        display: flex;
       }
 
-      .stats {
-        flex-direction: column;
-        gap: 15px;
-      }
-      .stat-box {
-        width: 100%;
+      .header {
+        padding: 15px 20px;
       }
     }
   </style>
@@ -206,7 +192,7 @@
       </div>
     </div>
 
-    <!-- Hamburger button -->
+    <!-- Hamburger Button -->
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
     <nav>
