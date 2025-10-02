@@ -30,6 +30,7 @@
       padding: 15px 40px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: relative;
+      z-index: 1000;
     }
     .logo {
       display: flex;
@@ -150,7 +151,7 @@
       }
       .nav-links {
         display: none;
-        flex-direction: column;
+        flex-direction: column !important; /* force vertical on mobile */
         gap: 10px;
         width: 100%;
         background: #fff;
@@ -255,9 +256,18 @@
   </footer>
 
   <script>
+    // Toggle mobile menu
     function toggleMenu() {
       document.getElementById("navMenu").classList.toggle("active");
     }
+
+    // Close menu automatically when a link is clicked
+    const navLinks = document.querySelectorAll(".nav-links li a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navMenu").classList.remove("active");
+      });
+    });
   </script>
 
 </body>
