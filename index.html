@@ -93,6 +93,7 @@
       font-size: 64px;
       font-family: 'Noto Sans Tamil', sans-serif;
       font-weight: 700;
+      word-break: break-word;
     }
     .hero-sub {
       font-size: 28px;
@@ -169,6 +170,31 @@
       .nav-links.active {
         display: flex;
       }
+
+      /* Hero text scaling */
+      .hero-tamil {
+        font-size: 36px;
+      }
+      .hero-sub {
+        font-size: 20px;
+      }
+      .hero-desc {
+        font-size: 16px;
+      }
+      .hero-small {
+        font-size: 12px;
+      }
+
+      /* Stats stacking */
+      .stats {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .stat-box {
+        min-width: auto;
+        width: 80%;
+        margin: 0 auto;
+      }
     }
   </style>
 </head>
@@ -202,7 +228,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h2 class="hero-tamil">திருமங்கலம்</h2>
+    <h1 class="hero-tamil">திருமங்கலம்</h1>
     <h3 class="hero-sub">The Sacred Town</h3>
     <p class="hero-desc">Gateway to Madurai District | தூங்கா நகரத்தின் துணை நகரம்</p>
     <p class="hero-small">Historic town famous for temples, culture, and the sacred Mangalyam tradition</p>
